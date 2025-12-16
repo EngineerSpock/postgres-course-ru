@@ -376,6 +376,45 @@ INSERT INTO employees VALUES (7, 'King', 'Robert', 'Sales Representative', 'Mr.'
 INSERT INTO employees VALUES (8, 'Callahan', 'Laura', 'Inside Sales Coordinator', 'Ms.', '1958-01-09', '1994-03-05', '4726 - 11th Ave. N.E.', 'Seattle', 'WA', '98105', 'USA', '(206) 555-1189', '2344', '\x', 'Laura received a BA in psychology from the University of Washington.  She has also completed a course in business French.  She reads and writes French.', 2, 'http://accweb/emmployees/davolio.bmp');
 INSERT INTO employees VALUES (9, 'Dodsworth', 'Anne', 'Sales Representative', 'Ms.', '1966-01-27', '1994-11-15', '7 Houndstooth Rd.', 'London', NULL, 'WG2 7LT', 'UK', '(71) 555-4444', '452', '\x', 'Anne has a BA degree in English from St. Lawrence College.  She is fluent in French and German.', 5, 'http://accweb/emmployees/davolio.bmp');
 
+-- Adding salary to employees
+ALTER TABLE employees
+ADD COLUMN salary numeric(12,2);
+
+UPDATE employees
+SET salary=64.47
+WHERE employee_id=1;
+
+UPDATE employees
+SET salary=52.42
+WHERE employee_id=2;
+
+UPDATE employees
+SET salary=78.47
+WHERE employee_id=3;
+
+UPDATE employees
+SET salary=62.95
+WHERE employee_id=4;
+
+UPDATE employees
+SET salary=55.56
+WHERE employee_id=5;
+
+UPDATE employees
+SET salary=54.92
+WHERE employee_id=6;
+
+UPDATE employees
+SET salary=64.35
+WHERE employee_id=7;
+
+UPDATE employees
+SET salary=75.60
+WHERE employee_id=8;
+
+UPDATE employees
+SET salary=0.00
+WHERE employee_id=9;
 
 --
 -- Data for Name: employee_territories; Type: TABLE DATA; Schema: public; Owner: -
@@ -3904,4 +3943,5 @@ ALTER TABLE ONLY employees
     
 --
 -- PostgreSQL database dump complete
+
 --
