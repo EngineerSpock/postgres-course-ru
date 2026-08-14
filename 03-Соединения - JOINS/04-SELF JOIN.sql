@@ -3,7 +3,7 @@ CREATE TABLE employee (
 	first_name varchar(256) NOT NULL,
 	last_name varchar(256) NOT NULL,
 	manager_id int,
-	FOREIGN KEY (manager_id) REFERENCES employee(employee_id);
+	FOREIGN KEY (manager_id) REFERENCES employee(employee_id)
 );
 
 INSERT INTO employee
